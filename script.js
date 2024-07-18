@@ -151,3 +151,14 @@ function updateCharts(user) {
 
 
 }
+// Function to capture screenshot and share on LinkedIn and Twitter
+const screenshotTarget = document.body;
+
+html2canvas(screenshotTarget).then((canvas) => {
+    const base64image = canvas.toDataURL("image/png");
+    window.location.href = base64image;
+});
+
+// Attach this function to your share button
+const shareButton = document.getElementById('shareButton');
+shareButton.addEventListener('click', screenshotTarget());

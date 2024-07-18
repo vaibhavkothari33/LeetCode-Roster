@@ -1,0 +1,103 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #263043;
+}
+
+.parent {
+    /* margin-top: 50px; */
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    /* background-color: green; */
+
+
+}
+
+.child {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 170px;
+    /* background-color: orange; */
+
+}
+
+input {
+    height: 50px;
+    width: 350px;
+    font-size: 22px;
+    margin-right: 25px;
+    border: 2px black solid;
+    border-radius: 65px;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    border: 2px black solid;
+    border-radius: 65px;
+    cursor: pointer;
+}
+
+.roast {
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 40px;
+    text-align: left;
+}
+
+.chart-container {
+    width: 280px;
+    height: 180px;
+}
+
+
+.chart-container {
+    margin-top: 25px;
+    border-radius: 5px;
+    float: left;
+
+}
+
+.flex-container {
+    display: flex;
+    /* background-color: red; */
+}
+
+#chart {
+    margin-top: -20px;
+    padding-left: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+    color: white;
+    /* font-size: 30px; */
+}
+
+@media only screen and (max-width: 1024px) {
+    input {
+        height: 50px;
+        width: 270px;
+        font-size: 18px;
+
+    }
+
+    button {
+        height: 40px;
+        width: 95px;
+
+    }
+}

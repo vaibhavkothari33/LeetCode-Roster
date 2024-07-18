@@ -25,9 +25,6 @@ The LeetCode Roaster is a web application that fetches user statistics from the 
 ## Installation
 No installation required. Simply open the `index.html` file in a web browser.
 
-## Screenshots
-Include screenshots of your application here, showcasing different features and roasts generated for different users.
-
 ## Credits
 - **Developed by:** Vaibhav Kothari
 - **API Used:** LeetCode Stats API (https://leetcode-stats-api.herokuapp.com)
