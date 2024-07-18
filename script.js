@@ -42,7 +42,7 @@ function updateRoast(user) {
     roast.innerHTML = `<h3>What's wrong with you? Might want to try some hard questions for a real challenge! Staying in your comfort zone won't help you grow. Push your limits and see how far you can go.</h3>`;
 }
   else if (totalSolved >25 && totalSolved< 50) {
-    roast.innerHTML = `<h3>Hey, you've dipped your toes into LeetCode with 25 to 50 questions solved. Not bad, but let's be real—those are rookie numbers. Time to step it up and dive deeper into the algorithmic abyss. The hard problems aren't going to solve themselves, champ. Get cracking and level up your coding game!</h3>`;
+    roast.innerHTML = `<h3>Hey, you've dipped your toes into LeetCode with ${totalSolved} questions solved. Not bad, but let's be real—those are rookie numbers. Time to step it up and dive deeper into the algorithmic abyss. The hard problems aren't going to solve themselves, champ. Get cracking and level up your coding game!</h3>`;
 }
 else if (hardSolved > 150) {
   roast.innerHTML = `<h3>Impressive! You've conquered more than 150 hard questions on LeetCode. It's clear you love a challenge and thrive under pressure. Keep pushing those boundaries and tackling the toughest problems out there. You're on a path to mastery—hard problems beware, there's no stopping this LeetCode warrior!</h3>`;
