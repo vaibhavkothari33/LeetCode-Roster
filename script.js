@@ -37,23 +37,23 @@ function updateRoast(user) {
   console.log(mediumSolved - easySolved);
   if (easySolved < 20 && mediumSolved < 10 && hardSolved < 3) {
     roast.innerHTML = `<h3>You're just a newbie on LeetCode. Need to work hard! It's like you're scared of the medium and hard questions. Come on, step up your game and try to tackle some challenging problems! Or are you just here for the participation trophy?</h3>`;
-}
+  }
   else if (easySolved === 0) {
     roast.innerHTML = `<h3>What's wrong with you? Might want to try some hard questions for a real challenge! Staying in your comfort zone won't help you grow. Push your limits and see how far you can go.</h3>`;
-}
-else if (acceptanceRate < 54) {
-  roast.innerHTML = `<h3>Your acceptance rate is ${acceptanceRate.toFixed(2)}%. Yikes! Looks like accuracy isn't your strong suit.You need to click on Run button not on Submit 💀. Take a breather, focus, and dive deeper into problem-solving strategies. Quality over quantity, remember? Precision wins the race in mastering LeetCode challenges!</h3>`;
-}
+  }
+  else if (acceptanceRate < 54) {
+    roast.innerHTML = `<h3>Your acceptance rate is ${acceptanceRate.toFixed(2)}%. Yikes! Looks like accuracy isn't your strong suit.You need to click on Run button not on Submit 💀. Take a breather, focus, and dive deeper into problem-solving strategies. Quality over quantity, remember? Precision wins the race in mastering LeetCode challenges!</h3>`;
+  }
 
-  else if (totalSolved >25 && totalSolved< 50) {
+  else if (totalSolved > 25 && totalSolved < 50) {
     roast.innerHTML = `<h3>Hey, you've dipped your toes into LeetCode with ${totalSolved} questions solved. Not bad, but let's be real—those are rookie numbers. Time to step it up and dive deeper into the algorithmic abyss. The hard problems aren't going to solve themselves, champ. Get cracking and level up your coding game!</h3>`;
-}
-else if (hardSolved > 150) {
-  roast.innerHTML = `<h3>Impressive! You've conquered more than 150 hard questions on LeetCode. It's clear you love a challenge and thrive under pressure. Keep pushing those boundaries and tackling the toughest problems out there. You're on a path to mastery—hard problems beware, there's no stopping this LeetCode warrior!</h3>`;
-}
-else if (hardSolved > 40) {
-  roast.innerHTML = `<h3>Impressive! You've conquered ${hardSolved} hard questions on LeetCode. It's clear you love a challenge and thrive under pressure. Keep pushing those boundaries and tackling the toughest problems out there. You're on a path to mastery—hard problems beware, there's no stopping this LeetCode warrior!</h3>`;
-}
+  }
+  else if (hardSolved > 150) {
+    roast.innerHTML = `<h3>Impressive! You've conquered more than 150 hard questions on LeetCode. It's clear you love a challenge and thrive under pressure. Keep pushing those boundaries and tackling the toughest problems out there. You're on a path to mastery—hard problems beware, there's no stopping this LeetCode warrior!</h3>`;
+  }
+  else if (hardSolved > 40) {
+    roast.innerHTML = `<h3>Impressive! You've conquered ${hardSolved} hard questions on LeetCode. It's clear you love a challenge and thrive under pressure. Keep pushing those boundaries and tackling the toughest problems out there. You're on a path to mastery—hard problems beware, there's no stopping this LeetCode warrior!</h3>`;
+  }
 
   else if (totalSolved > 200 && mediumSolved - easySolved > 30) {
     roast.innerHTML = `<h3>You seem to dodge easy questions like they're beneath you. Bold move, champ. But let's not kid ourselves—if you can't handle the basics, those tough problems are going to eat you alive. You crush medium questions, but the hard ones seem to crush you! Stop pretending you're too cool for the basics and face those hard ones head-on. Quit running and start conquering. You've got this—or do you?</h3>`;
@@ -151,14 +151,24 @@ function updateCharts(user) {
 
 
 }
-// Function to capture screenshot and share on LinkedIn and Twitter
-const screenshotTarget = document.body;
+const shareToLinkedIn = () => {
+  const roastText = document.querySelector('.roast').innerText;
+  const linkedInText = encodeURIComponent(`I got roasted by the LeetCode Roaster! 😄 Check out my personalized roast and see how you measure up:\n\n${roastText}\n\nDon't forget to share your own roast too! https://vaibhavkothari33.github.io/LeetCode-Roster/`);
+  const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}&text=${linkedInText}`;
 
-html2canvas(screenshotTarget).then((canvas) => {
-    const base64image = canvas.toDataURL("image/png");
-    window.location.href = base64image;
-});
+  window.open(linkedInUrl, '_blank');
+};
+
+const shareToTwitter = () => {
+  const roastText = document.querySelector('.roast').innerText;
+  const twitterText = encodeURIComponent(`I got roasted by the LeetCode Roaster! 😄\n\n${roastText}\n\nCheck out my personalized roast and see how you measure up:https://shorturl.at/dnLW5`);
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${twitterText}`;
+
+  window.open(twitterUrl, '_blank');
+};
 
 // Attach this function to your share button
-const shareButton = document.getElementById('shareButton');
-shareButton.addEventListener('click', screenshotTarget());
+const shareButtonl = document.getElementById('shareButtonL');
+shareButtonl.addEventListener('click', shareToLinkedIn);
+const shareButtont = document.getElementById('shareButtonT');
+shareButtont.addEventListener('click', shareToTwitter);
