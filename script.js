@@ -41,6 +41,10 @@ function updateRoast(user) {
   else if (easySolved === 0) {
     roast.innerHTML = `<h3>What's wrong with you? Might want to try some hard questions for a real challenge! Staying in your comfort zone won't help you grow. Push your limits and see how far you can go.</h3>`;
 }
+else if (acceptanceRate < 54) {
+  roast.innerHTML = `<h3>Your acceptance rate is ${acceptanceRate.toFixed(2)}%. Yikes! Looks like accuracy isn't your strong suit.You need to click on Run button not on Submit 💀. Take a breather, focus, and dive deeper into problem-solving strategies. Quality over quantity, remember? Precision wins the race in mastering LeetCode challenges!</h3>`;
+}
+
   else if (totalSolved >25 && totalSolved< 50) {
     roast.innerHTML = `<h3>Hey, you've dipped your toes into LeetCode with ${totalSolved} questions solved. Not bad, but let's be real—those are rookie numbers. Time to step it up and dive deeper into the algorithmic abyss. The hard problems aren't going to solve themselves, champ. Get cracking and level up your coding game!</h3>`;
 }
@@ -50,9 +54,7 @@ else if (hardSolved > 150) {
 else if (hardSolved > 40) {
   roast.innerHTML = `<h3>Impressive! You've conquered ${hardSolved} hard questions on LeetCode. It's clear you love a challenge and thrive under pressure. Keep pushing those boundaries and tackling the toughest problems out there. You're on a path to mastery—hard problems beware, there's no stopping this LeetCode warrior!</h3>`;
 }
-else if (acceptanceRate < 54) {
-  roast.innerHTML = `<h3>Your acceptance rate is ${acceptanceRate.toFixed(2)}%. Looks like you need to work on your accuracy! Focus on understanding the problems thoroughly before you submit. Quality over quantity!</h3>`;
-}
+
   else if (totalSolved > 200 && mediumSolved - easySolved > 30) {
     roast.innerHTML = `<h3>You seem to dodge easy questions like they're beneath you. Bold move, champ. But let's not kid ourselves—if you can't handle the basics, those tough problems are going to eat you alive. You crush medium questions, but the hard ones seem to crush you! Stop pretending you're too cool for the basics and face those hard ones head-on. Quit running and start conquering. You've got this—or do you?</h3>`;
   }
