@@ -43,7 +43,7 @@ function updateRoast(user) {
   if (easySolved === 0) {
     roast.innerHTML = `<h3>What's wrong with you? Might want to try some hard questions for a real challenge! Staying in your comfort zone won't help you grow. Push your limits and see how far you can go.</h3>`;
   }
-  else if (easySolved < 20 && mediumSolved < 10 && hardSolved < 3) {
+  else if (easySolved < 25 && mediumSolved < 10 && hardSolved < 3) {
     roast.innerHTML = `<h3>You're just a newbie on LeetCode. Need to work hard! It's like you're scared of the medium and hard questions. Come on, step up your game and try to tackle some challenging problems! Or are you just here for the participation trophy?</h3>`;
   }
   else if (acceptanceRate < 54) {
