@@ -1,7 +1,6 @@
 # LeetCode Roaster
-```
-https://vaibhavkothari33.github.io/LeetCode-Roster/
-```
+Try it out: https://vaibhavkothari33.github.io/LeetCode-Roster/
+
 ## Overview
 The LeetCode Roaster is a web application that fetches user statistics from the LeetCode API and generates humorous and motivational messages ("roasts") based on their performance. It also visualizes their acceptance rate and question-solving distribution using charts.
 
