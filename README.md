@@ -1,4 +1,6 @@
 # LeetCode Roaster
+It's currently not working as the API used is down. ":("
+
 Try it out: https://vaibhavkothari33.github.io/LeetCode-Roster/
 
 ## Overview
