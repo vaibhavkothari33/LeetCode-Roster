@@ -13,30 +13,34 @@
 
 
 <body>
-    <h2 class="heading">LeetCode-Roaster 🔥</h2>
-    <div class="parent">
-        <div class="child">
-            <input type="text" placeholder="   Enter your leetcode username">
+    <div class="container">
+        <h1 class="heading">LeetCode-Roaster 🔥</h1>
+        
+        <div class="search-container">
+            <input type="text" placeholder="Enter your LeetCode username">
             <button type="submit">Submit</button>
-
-            <div class="flex-container">
-                <div class="chart-container">
-                    <canvas class="my-chart"></canvas>
-                </div>
-
-                <div class="chart-container">
-                    <div id="chart">
-                    </div>
-                </div>
-            </div>
-
-            <div class="roast"></div>
-
-            <button id="shareButtonL">Share Roast on Linked in</button>
-            <button id="shareButtonT">Share Roast on Twitter</button>
-            <!-- <div class="roast"><h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cumque, beatae, omnis quia laborum eius, necessitatibus voluptates rerum pariatur inventore aperiam expedita impedit provident! Labore totam cupiditate voluptatem ipsa unde atque dignissimos molestias? Fugiat natus voluptatum accusantium alias, eius iure?</h3></div> -->
         </div>
-    </div>
+        
+        <div class="charts-container">
+            <div class="chart-card">
+                <div class="chart-title">Problem Distribution</div>
+                <canvas class="my-chart"></canvas>
+            </div>
+            
+            <div class="chart-card">
+                <div class="chart-title">Acceptance Rate</div>
+                <div id="chart"></div>
+            </div>
+        </div>
+        
+        <div class="roast-container hidden">
+            <div class="roast"></div>
+        </div>
+        
+        <div class="share-buttons hidden">
+            <button id="shareButtonL">Share on LinkedIn</button>
+            <button id="shareButtonT">Share on Twitter</button>
+        </div>
     </div>
 </body>
 <script src="script.js"></script>
